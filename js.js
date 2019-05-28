@@ -1,14 +1,14 @@
 function App() {
     this.array = ["nokia", "iphone", "samsung"];
     this.display = function () {
-        let print = "";
+        let html = "<tr class ='bolld'><td>STT</td><td>IPHONE</td><td>EDIT</td><td>DELETE</td></tr>";
         for (let i = 0; i < this.array.length; i++) {
-            print += "<tr><td>" + i + "</td>";
-            print += "<td>" + this.array[i] + "</td>";
-            print += "<td><button onclick='edit(this.value)' value='" + this.array[i] + "'>edit</button></td>";
-            print += "<td><button onclick='Delete(this.value)' value='" + i + "'>Delete</button></td></tr>";
+            html += "<tr><td>" + eval(i + 1) + "</td>";
+            html += "<td>" + this.array[i] + "</td>";
+            html += "<td><button onclick='edit(this.value)' value='" + this.array[i] + "'>edit</button></td>";
+            html += "<td><button onclick='Delete(this.value)' value='" + i + "'>Delete</button></td></tr>";
         }
-        document.getElementById("output").innerHTML = print;
+        document.getElementById("output").innerHTML = html;
     };
     this.edit = function (value) {
         for (let i = 0; i < this.array.length; i++) {
@@ -47,5 +47,5 @@ function Add() {
     if (item !== "") {
         app.add(item);
     }
-    document.getElementById("input").value="";
+    document.getElementById("input").value = "";
 }

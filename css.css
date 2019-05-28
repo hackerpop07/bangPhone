@@ -23,3 +23,6 @@ td:nth-child(3){
 td:nth-child(4){
     width: 15px;
 }
+.bolld{
+    font-weight: bold;
+}
